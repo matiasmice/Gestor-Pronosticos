@@ -1,0 +1,42 @@
+C:\Users\matia\OneDrive\Documentos\Programación\Proyectos VS\Gestor Pronosticos\Entidades\bin\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Documentos\Programación\Proyectos VS\Gestor Pronosticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\matia\OneDrive\Documentos\Programación\Proyectos VS\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\matia\OneDrive\Documentos\Programación\Proyectos VS\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Documentos\Programación\Proyectos VS\Gestor Pronosticos\Entidades\obj\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Documentos\Programación\Proyectos VS\Gestor Pronosticos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Guzman\Desktop\PF programacion\Gestor Pronosticos (1)\Gestor Pronosticos\Entidades\bin\Debug\Entidades.dll
+C:\Users\Guzman\Desktop\PF programacion\Gestor Pronosticos (1)\Gestor Pronosticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Guzman\Desktop\PF programacion\Gestor Pronosticos (1)\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Guzman\Desktop\PF programacion\Gestor Pronosticos (1)\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Guzman\Desktop\PF programacion\Gestor Pronosticos (1)\Gestor Pronosticos\Entidades\obj\Debug\Entidades.dll
+C:\Users\Guzman\Desktop\PF programacion\Gestor Pronosticos (1)\Gestor Pronosticos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\bin\Debug\Entidades.dll
+C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.dll
+C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Guzman\Desktop\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\bin\Debug\Entidades.dll
+C:\Users\Guzman\Desktop\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Guzman\Desktop\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Guzman\Desktop\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Guzman\Desktop\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.dll
+C:\Users\Guzman\Desktop\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\matia\Downloads\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\matia\Downloads\Gestor Pronosticos\Entidades\obj\Debug\Entidades.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Entidades\bin\Debug\Entidades.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Guzman\Desktop\Gestor Pronosticos\Entidades\bin\Debug\Entidades.dll
+C:\Users\Guzman\Desktop\Gestor Pronosticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Guzman\Desktop\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Guzman\Desktop\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Guzman\Desktop\Gestor Pronosticos\Entidades\obj\Debug\Entidades.dll
+C:\Users\Guzman\Desktop\Gestor Pronosticos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Guzman\Downloads\Gestor Pronosticos-20220315T234425Z-001\Gestor Pronosticos\Entidades\bin\Debug\Entidades.dll
+C:\Users\Guzman\Downloads\Gestor Pronosticos-20220315T234425Z-001\Gestor Pronosticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Guzman\Downloads\Gestor Pronosticos-20220315T234425Z-001\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Guzman\Downloads\Gestor Pronosticos-20220315T234425Z-001\Gestor Pronosticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Guzman\Downloads\Gestor Pronosticos-20220315T234425Z-001\Gestor Pronosticos\Entidades\obj\Debug\Entidades.dll
+C:\Users\Guzman\Downloads\Gestor Pronosticos-20220315T234425Z-001\Gestor Pronosticos\Entidades\obj\Debug\Entidades.pdb

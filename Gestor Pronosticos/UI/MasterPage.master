@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href ="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js" ></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: xx-large;
+        }
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="text-center">
+            <h1><strong class="auto-style2" style="color: #009999; font-style: inherit; font-variant: normal; text-transform: inherit;"><span class="auto-style1">Pronósticos del tiempo</span></strong></h1>
+            <p class="text-end">
+                <asp:Label ID="lblUsuarios" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" Font-Overline="False" Font-Underline="True" ForeColor="Blue" OnClick="Button1_Click" Text="Cerrar Sesión" />
+                &nbsp;&nbsp;&nbsp;&nbsp; </p>
+            <div>
+                <asp:Menu ID="Menu1" runat="server" BackColor="#33CCCC" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Georgia" Font-Size="Large" Font-Strikeout="False" ForeColor="Black" Orientation="Horizontal" StaticSubMenuIndent="10px" OnMenuItemClick="Menu1_MenuItemClick">
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <Items>
+                        <asp:MenuItem Text="Inicio" Value="Inicio" NavigateUrl="~/BienvenidaUsr.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Edición de Usuario" Value="Usuarios" NavigateUrl="~/EditUsr.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Paises" Value="Paises" NavigateUrl="~/ABM Pais.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Ciudades" Value="Ciudades" NavigateUrl="~/ABM Ciudad.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Registrar Pronóstico" Value="Registrar Pronóstico" NavigateUrl="~/ABM Pronostico.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Pronósticos por ciudad" Value="Pronósticos por ciudad" NavigateUrl="~/PronosticosPorCiudad.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Pronósticos por día" Value="Pronósticos por día" NavigateUrl="~/PronosticosPorDia.aspx"></asp:MenuItem>
+                    </Items>
+
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+
+                </asp:Menu>
+                <br />
+            </div>
+            <p>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Logos/Gestor de Pron¢sticos3.png" />
+            </p>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <div>
+    </div>
+</body>
+</html>
