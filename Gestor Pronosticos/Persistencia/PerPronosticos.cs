@@ -104,12 +104,12 @@ namespace Persistencia
                     Usuario usuario = perUsuario.Buscar(reader["Usuario"].ToString());
                     Ciudad ciudad = perCiudad.Buscar(reader["CodCiudad"].ToString(), reader["CodPais"].ToString());
 
-                    pronostico = new Pronostico(reader["TipodeCielo"].ToString(), usuario, ciudad,
+                    pronostico = new Pronostico(reader["TipodeCielo"].ToString(), usuario, ciudad, 
                                                Convert.ToInt32(reader["TempMax"].ToString()),
-                                               Convert.ToInt32(reader["TempMin"].ToString()),
-                                               Convert.ToInt32(reader["ProbLluvia"].ToString()),
+                                               Convert.ToInt32(reader["TempMin"].ToString()), 
+                                               Convert.ToInt32(reader["ProbLluvia"].ToString()), 
                                                Convert.ToInt32(reader["ProbTormenta"].ToString()),
-                                               Convert.ToInt32(reader["VelViento"].ToString()),
+                                               Convert.ToInt32(reader["VelViento"].ToString()), 
                                                Convert.ToDateTime(reader["Fecha"].ToString()),
                                                Convert.ToInt32(reader["CodAuto"].ToString()));                                               
 
@@ -135,7 +135,7 @@ namespace Persistencia
 
             try
             {
-                SqlCommand command = new SqlCommand("sp_AgregarPronostico", sqlConnection);
+                SqlCommand command = new SqlCommand("sp_AltaPronostico", sqlConnection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add(new SqlParameter("CodCiud", pronostico.Ciudad.CodCiudad));
                 command.Parameters.Add(new SqlParameter("Usr", pronostico.Usuario.User));

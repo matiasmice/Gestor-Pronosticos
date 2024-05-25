@@ -13,10 +13,8 @@ public partial class EditUsr : System.Web.UI.Page
     private LogPais logpais = new LogPais();
     protected void Page_Load(object sender, EventArgs e)
     {
-        
         txtCodPais.Focus();
         txtcodCiudad.Focus();
-        txtNombre.Enabled = false;
     }
     protected void btnEditar_Click(object sender, EventArgs e)
     {
@@ -90,56 +88,44 @@ public partial class EditUsr : System.Web.UI.Page
         btnCrear.Enabled = false;
         btnEditar.Enabled = false;
         btnEliminar.Enabled = false;
-        btnBuscar.Enabled = true;
 
 
     }
 
     protected void txtBuscar_Click(object sender, EventArgs e)
     {
-        lblCiudad.Text = string.Empty;
-        if (txtCodPais.Text == string.Empty)
-            lblCiudad.Text = "Indique el código del país";
-        else if (txtcodCiudad.Text == string.Empty)
-            lblCiudad.Text = "Indique el código de ciudad";
-        else
+        try
         {
-            try
+
+            lblCiudad.Text = string.Empty;
+            string codpais = txtCodPais.Text;
+            string codciudad = txtcodCiudad.Text;
+            Ciudad ciudad = logCiudad.Buscar(codciudad, codpais);
+
+
+            if (ciudad != null)
             {
-
-                string codpais = txtCodPais.Text;
-                string codciudad = txtcodCiudad.Text;
-                Ciudad ciudad = logCiudad.Buscar(codciudad, codpais);
-
-
-                if (ciudad != null)
-                {
-                    txtCodPais.Text = ciudad.Pais.CodPais;
-                    txtNombre.Text = ciudad.Nombre;
-                    txtcodCiudad.Text = ciudad.CodCiudad;
-                    btnEditar.Enabled = true;
-                    btnEliminar.Enabled = true;
-                    txtNombre.Enabled = true;
-                    btnBuscar.Enabled = false;
-
-                }
-                else
-                {
-                    lblCiudad.ForeColor = System.Drawing.Color.Red;
-                    lblCiudad.Text = "No existe la ciudad buscada";
-                    btnCrear.Enabled = true;
-                    txtNombre.Enabled = true;
-
-
-                }
+                txtCodPais.Text = ciudad.Pais.CodPais;
+                txtNombre.Text = ciudad.Nombre;
+                txtcodCiudad.Text = ciudad.CodCiudad;
+                btnEditar.Enabled = true;
+                btnEliminar.Enabled = true;
 
             }
-            catch (Exception ex)
+            else
             {
                 lblCiudad.ForeColor = System.Drawing.Color.Red;
-                lblCiudad.Text = ex.Message;
+                lblCiudad.Text = "No existe la ciudad buscada";
                 btnCrear.Enabled = true;
-            } 
+
+            }
+
+        }
+        catch (Exception ex)
+        {
+            lblCiudad.ForeColor = System.Drawing.Color.Red;
+            lblCiudad.Text = ex.Message;
+            btnCrear.Enabled = true;
         }
 
     }

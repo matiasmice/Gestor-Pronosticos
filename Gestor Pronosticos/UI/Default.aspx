@@ -73,21 +73,7 @@ strong {
     <p class="auto-style3">
         Pronósticos para el día de hoy:</p>
         <p>
-            <asp:GridView ID="gdvPronostico" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
-                <Columns>
-                    <asp:BoundField DataField="usuario.user" HeaderText="Usuario" />
-                    <asp:BoundField DataField="ciudad.nombre" HeaderText="Ciudad" />
-                    <asp:BoundField DataField="ciudad.pais.nombre" HeaderText="País" />
-                </Columns>
-                <FooterStyle BackColor="White" ForeColor="#000066" />
-                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                <RowStyle ForeColor="#000066" />
-                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            <asp:GridView ID="gdvPronostico" runat="server">
             </asp:GridView>
         </p>
         <p>

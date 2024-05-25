@@ -22,16 +22,15 @@
             <td class="auto-style7">
                 <asp:DropDownList ID="ddlPais" runat="server">
                 </asp:DropDownList>
-            &nbsp;
-                <asp:Button ID="btnListar" runat="server" Text="Listar Ciudades" OnClick="btnListar_Click" />
             </td>
             <td>
-                &nbsp;</td>
+                <asp:Button ID="btnListar" runat="server" Text="Listar Ciudades" OnClick="btnListar_Click" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style7">
-                <asp:GridView ID="grvCiudades" runat="server" OnRowCommand="grvCiudades_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="grvCiudades_SelectedIndexChanged">
+                <asp:GridView ID="grvCiudades" runat="server" OnRowCommand="grvCiudades_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
                     <Columns>
                         <asp:ButtonField HeaderText="Ver pronósticos asociados" Text="Ver" />
                     </Columns>

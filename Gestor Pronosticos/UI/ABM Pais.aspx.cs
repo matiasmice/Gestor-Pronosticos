@@ -65,10 +65,6 @@ public partial class EditUsr : System.Web.UI.Page
         {
             lblPais.Text = ex.Message;
         }
-        finally
-        {
-            LimpiarControles();
-        }
     }
 
     protected void btnEliminar_Click(object sender, EventArgs e)
@@ -122,6 +118,5 @@ public partial class EditUsr : System.Web.UI.Page
         btnCrear.Enabled = false;
         btnEditar.Enabled = false;
         btnEliminar.Enabled = false;
-        btnBuscar.Enabled = true;
     }    
 }

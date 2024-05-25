@@ -32,10 +32,6 @@ public partial class EditUsr : System.Web.UI.Page
         {
             lblMensaje.Text = ex.Message;
         }
-        finally
-        {
-            LimpiarControles();
-        }
     }
 
     protected void btnEliminar_Click(object sender, EventArgs e)
@@ -55,10 +51,6 @@ public partial class EditUsr : System.Web.UI.Page
         {
             lblMensaje.Text = ex.Message;
         }
-        finally
-        {
-            LimpiarControles();
-        }
     }
 
     protected void BtnCrearUsr_Click(object sender, EventArgs e)
@@ -77,10 +69,6 @@ public partial class EditUsr : System.Web.UI.Page
         catch (Exception ex)
         {
             lblMensaje.Text = ex.Message;
-        }
-        finally
-        {
-            LimpiarControles();
         }
     }
 
@@ -112,17 +100,5 @@ public partial class EditUsr : System.Web.UI.Page
             txtContrasenia.Enabled = true;
             BtnCrearUsr.Enabled = true;
         }
-    }
-    private void LimpiarControles()
-    {
-
-        txtApellido.Text = string.Empty;
-        txtNombre.Text = string.Empty;
-        txtUsuario.Enabled = true;
-
-        BtnCrearUsr.Enabled = false;
-        btnEditar.Enabled = false;
-        btnEliminar.Enabled = false;
-        btnBuscar.Enabled = true;
     }
 }

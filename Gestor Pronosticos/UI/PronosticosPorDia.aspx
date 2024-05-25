@@ -43,21 +43,7 @@
         <tr>
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style7">
-                <asp:GridView ID="grvPronPorFecha" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
-                    <Columns>
-                        <asp:BoundField AccessibleHeaderText="Usuario" DataField="usuario.user" HeaderText="Usuario" />
-                        <asp:BoundField AccessibleHeaderText="Ciudad" DataField="ciudad.nombre" HeaderText="Ciudad" />
-                        <asp:BoundField DataField="ciudad.pais.nombre" HeaderText="Pais" SortExpression="ciudad.pais.nombre" />
-                    </Columns>
-                    <FooterStyle BackColor="White" ForeColor="#000066" />
-                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                    <RowStyle ForeColor="#000066" />
-                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                    <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                    <SortedDescendingHeaderStyle BackColor="#00547E" />
+                <asp:GridView ID="grvPronPorFecha" runat="server">
                 </asp:GridView>
             </td>
             <td>&nbsp;</td>

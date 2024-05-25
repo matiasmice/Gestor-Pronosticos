@@ -67,15 +67,13 @@
         <td class="auto-style9">Código País:</td>
         <td colspan="2" class="text-start">
             <asp:TextBox ID="txtCodPais" runat="server" Width="249px"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCodPais" EnableClientScript="False" ErrorMessage="Debe ingresar un código"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
         <td class="auto-style9">Nombre:</td>
         <td colspan="2" class="text-start">
             <asp:TextBox ID="txtNombre" runat="server" Width="250px" Enabled="False"></asp:TextBox>
-        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombre" EnableClientScript="False" ErrorMessage="Debe ingresar un nombre"></asp:RequiredFieldValidator>
-            <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" />
+        &nbsp;<asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" />
         </td>
     </tr>
     <tr>

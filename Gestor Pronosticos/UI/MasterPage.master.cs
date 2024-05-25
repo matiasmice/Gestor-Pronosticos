@@ -34,9 +34,4 @@ public partial class MasterPage : System.Web.UI.MasterPage
         lblUsuarios.Text = string.Empty;
         Response.Redirect("Default.aspx");
     }
-
-    protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
-    {
-
-    }
 }
