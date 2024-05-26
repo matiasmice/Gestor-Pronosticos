@@ -9,7 +9,7 @@ namespace Persistencia
     internal class Conexion
     {
         //string de conexion 
-        internal const string connectionString = "Server= LAPTOP-KDKVLD96\\SQLEXPRESS; DataBase=GestorPronosticos; Trusted_Connection=true;";
+        internal const string connectionString = "Server=LAPTOP-KDKVLD96\\SQLEXPRESS; DataBase=GestorPronosticos; Trusted_Connection=true;";
 
     }
 }

@@ -10,7 +10,7 @@ namespace Persistencia
 {
     public class PerUsuario
     {
-        public void Editar(Usuario usuario)
+        public bool Editar(Usuario usuario)
         {
             SqlConnection sqlConnection = new SqlConnection(Conexion.connectionString);
 
@@ -34,6 +34,10 @@ namespace Persistencia
                 command.ExecuteNonQuery();
 
                 //Clasifico el retorno 
+                if (Convert.ToInt32(retorno.Value) == 1)
+                    return true;       
+                
+
                 switch (Convert.ToInt32(retorno.Value))
                 {
                     case -1:
@@ -44,11 +48,6 @@ namespace Persistencia
                     case -2:
                         {
                             throw new Exception("No existe un usuario con ese nombre de usuario");
-                            break;
-                        }
-                    case 1:
-                        {
-                            throw new Exception("Usuario editado con éxito");
                             break;
                         }
                     default:
@@ -142,8 +141,7 @@ namespace Persistencia
             }
         }
 
-        //CREAR quizá no sea un VOID y deba retornar el usuario creado
-        public void Crear(Usuario usuario)
+        public bool Crear(Usuario usuario)
         {
             SqlConnection sqlConnection = new SqlConnection(Conexion.connectionString);
 
@@ -168,6 +166,9 @@ namespace Persistencia
                 command.ExecuteNonQuery();
 
                 //Clasifico el retorno 
+                if (Convert.ToInt32(retorno.Value) == 1)
+                    return true;
+
                 switch (Convert.ToInt32(retorno.Value))
                 {
                     case -1:
@@ -180,11 +181,7 @@ namespace Persistencia
                             throw new Exception("No se ha creado ya que existe un usuario con ese nombre de usuario");
                             break;
                         }
-                    case 1:
-                        {
-                            throw new Exception("Usuario creado con éxito");
-                            break;
-                        }
+                    
                     default:
                         {
                             throw new Exception("Error desconocido");
@@ -202,7 +199,7 @@ namespace Persistencia
             }
         }
 
-        public void Eliminar(Usuario usuario)
+        public bool Eliminar(Usuario usuario)
         {
             SqlConnection sqlConnection = new SqlConnection(Conexion.connectionString);
 
@@ -224,6 +221,9 @@ namespace Persistencia
                 command.ExecuteNonQuery();
 
                 //Clasifico el retorno 
+                if (Convert.ToInt32(retorno.Value) == 1)
+                    return true;
+
                 switch (Convert.ToInt32(retorno.Value))
                 {
                     case -1:
@@ -239,11 +239,6 @@ namespace Persistencia
                     case -3:
                         {
                             throw new Exception("No se ha eliminado el usuario porque tiene pronósticos asosciados");
-                            break;
-                        }
-                    case 1:
-                        {
-                            throw new Exception("Usuario eliminado con éxito");
                             break;
                         }
                     default:

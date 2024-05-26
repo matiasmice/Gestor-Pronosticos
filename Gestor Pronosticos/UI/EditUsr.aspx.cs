@@ -13,6 +13,11 @@ public partial class EditUsr : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         txtUsuario.Focus();
+        if (IsPostBack)
+        {
+            lblMensaje.ForeColor = System.Drawing.Color.Black;
+            lblMensaje.Text = string.Empty;
+        }
     }
 
     protected void btnEditar_Click(object sender, EventArgs e)
@@ -26,11 +31,20 @@ public partial class EditUsr : System.Web.UI.Page
             Usuario usuario = new Usuario(nom, ape, usr, ctr);
 
 
-            logUsr.Editar(usuario);
+            if (logUsr.Editar(usuario))
+            {
+                lblMensaje.ForeColor = System.Drawing.Color.Green;
+                lblMensaje.Text = "Usuario editado con éxito";
+            }
         }
         catch (Exception ex)
         {
+            lblMensaje.ForeColor = System.Drawing.Color.Red;
             lblMensaje.Text = ex.Message;
+        }
+        finally
+        {
+            LimpiarControles();
         }
     }
 
@@ -45,11 +59,20 @@ public partial class EditUsr : System.Web.UI.Page
             Usuario usuario = new Usuario(nom, ape, usr, ctr);
 
 
-            logUsr.Eliminar(usuario);
+            if (logUsr.Eliminar(usuario))
+            {
+                lblMensaje.ForeColor = System.Drawing.Color.Green;
+                lblMensaje.Text = "Usuario eliminado con éxito";
+            }
         }
         catch (Exception ex)
         {
+            lblMensaje.ForeColor = System.Drawing.Color.Red;
             lblMensaje.Text = ex.Message;
+        }
+        finally
+        {
+            LimpiarControles();
         }
     }
 
@@ -64,41 +87,79 @@ public partial class EditUsr : System.Web.UI.Page
             Usuario usuario = new Usuario(nom, ape, usr, ctr);
 
 
-            logUsr.Crear(usuario);
+            if (logUsr.Crear(usuario))
+            {
+                lblMensaje.ForeColor = System.Drawing.Color.Green;
+                lblMensaje.Text = "Usuario creado con éxito";
+            }
         }
         catch (Exception ex)
         {
+            lblMensaje.ForeColor = System.Drawing.Color.Red;
             lblMensaje.Text = ex.Message;
+        }
+        finally
+        {
+            LimpiarControles();
         }
     }
 
     protected void btnBuscar_Click(object sender, EventArgs e)
     {
-        Usuario usuario = logUsr.Buscar(txtUsuario.Text);
-        btnBuscar.Enabled = false;
-
-        if (usuario !=null)
+        if (txtUsuario.Text != String.Empty)
         {
-            txtNombre.Text = usuario.Nombre;
-            txtApellido.Text = usuario.Apellido;
-            txtContrasenia.Text = usuario.Contrasenia;
+            Usuario usuario = logUsr.Buscar(txtUsuario.Text);
+            btnBuscar.Enabled = false;
 
-            txtUsuario.Enabled = false;
-            txtNombre.Enabled = true;
-            txtApellido.Enabled = true;
-            txtContrasenia.Enabled = true;
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+            if (usuario != null)
+            {
+                txtNombre.Text = usuario.Nombre;
+                txtApellido.Text = usuario.Apellido;
+                txtContrasenia.Text = usuario.Contrasenia;
 
+                txtUsuario.Enabled = false;
+                txtNombre.Enabled = true;
+                txtApellido.Enabled = true;
+                txtContrasenia.Enabled = true;
+                btnEditar.Enabled = true;
+                btnEliminar.Enabled = true;
+
+            }
+            else
+            {
+                lblMensaje.ForeColor = System.Drawing.Color.Red;
+                lblMensaje.Text = "No existe el usuario buscado. Complete los datos para crearlo";
+                txtUsuario.Enabled = false;
+                txtNombre.Enabled = true;
+                txtApellido.Enabled = true;
+                txtContrasenia.Enabled = true;
+                btnCrearUsr.Enabled = true;
+            }
         }
-        else
+        else 
         {
             lblMensaje.ForeColor = System.Drawing.Color.Red;
-            lblMensaje.Text = "No existe el usuario buscado";
-            txtNombre.Enabled = true;
-            txtApellido.Enabled = true;
-            txtContrasenia.Enabled = true;
-            BtnCrearUsr.Enabled = true;
+            lblMensaje.Text = "Debe ingresar un nómbre de usuario"; 
         }
+    }
+    private void LimpiarControles()
+    {
+        //Vacía todas las TxtBox
+        txtApellido.Text = string.Empty;
+        txtNombre.Text = string.Empty;
+        txtUsuario.Text = string.Empty;
+        txtContrasenia.Text = string.Empty;
+
+        //Habilita solamente la txtBox Usuario y el boton buscar
+        txtUsuario.Enabled = true;
+        
+        btnBuscar.Enabled = true;
+        btnCrearUsr.Enabled = false;
+        btnEditar.Enabled = false;
+        btnEliminar.Enabled = false;
+
+        txtNombre.Enabled = false;
+        txtApellido.Enabled = false;
+        txtContrasenia.Enabled = false;
     }
 }

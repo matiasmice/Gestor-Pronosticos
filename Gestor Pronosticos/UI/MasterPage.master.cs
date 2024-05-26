@@ -19,7 +19,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
             else
             {
                 Usuario usuario = (Usuario)Session["usuario"];
-                lblUsuarios.Text = "¡Hola: " + usuario.Nombre+"!";
+                lblUsuarios.Text = "¡Hola: " + usuario.Nombre+" "+ usuario.Apellido+"!"+"\n"+
+                    "Tu contraseña es: "+ usuario.Contrasenia;
             }
         }
         catch
@@ -33,5 +34,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
         Session["usuario"] = null;
         lblUsuarios.Text = string.Empty;
         Response.Redirect("Default.aspx");
+    }
+
+    protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+    {
+
     }
 }

@@ -76,29 +76,30 @@ namespace Persistencia
                 sqlConnection.Close();
             }
         }
-
-
-        public void Editar(Pais pais)
+        public bool Editar(Pais pais)
         {
             SqlConnection sqlConnection = new SqlConnection(Conexion.connectionString);
 
             try
             {
                 //ADO CONECTADO
-               
+
                 SqlCommand command = new SqlCommand("sp_EditPais", sqlConnection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add(new SqlParameter("Nom", pais.Nombre));
                 command.Parameters.Add(new SqlParameter("Cod", pais.CodPais));
-               
 
-             //variable de retorno
+
+                //variable de retorno
                 SqlParameter retorno = new SqlParameter();
                 retorno.Direction = System.Data.ParameterDirection.ReturnValue;
 
                 command.Parameters.Add(retorno);
                 sqlConnection.Open();
                 command.ExecuteNonQuery();
+
+                if (Convert.ToInt32(retorno.Value) == 1)
+                    return true;
 
                 switch (Convert.ToInt32(retorno.Value))
                 {
@@ -111,12 +112,7 @@ namespace Persistencia
                         {
                             throw new Exception("No existe un país con esos datos");
                             break;
-                        }
-                    case 1:
-                        {
-                            throw new Exception("País editado con éxito");
-                            break;
-                        }
+                        }                   
                     default:
                         {
                             throw new Exception("Error desconocido");
@@ -133,11 +129,7 @@ namespace Persistencia
                 sqlConnection.Close();
             }
         }
-
-       
-
-        //CREAR quizá no sea un VOID y deba retornar la ciudad creada
-        public void Agregar(Pais pais)
+        public bool Agregar(Pais pais)
         {
             SqlConnection sqlConnection = new SqlConnection(Conexion.connectionString);
 
@@ -174,7 +166,7 @@ namespace Persistencia
                         }
                     case 1:
                         {
-                            throw new Exception("País agregado con éxito");
+                            return true;
                             break;
                         }
                     default:
@@ -193,8 +185,7 @@ namespace Persistencia
                 sqlConnection.Close();
             }
         }
-
-        public void Eliminar(Pais pais)
+        public bool Eliminar(Pais pais)
         {
             SqlConnection sqlConnection = new SqlConnection(Conexion.connectionString);
 
@@ -234,7 +225,7 @@ namespace Persistencia
                         }
                     case 1:
                         {
-                            throw new Exception("País eliminado con éxito");
+                            return true;
                             break;
                         }
                     default:

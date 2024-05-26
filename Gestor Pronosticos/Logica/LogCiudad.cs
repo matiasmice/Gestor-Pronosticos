@@ -47,7 +47,17 @@ namespace Logica
                 throw ex;
             }
         }
-
+        public List<Ciudad> TodasCiudades()
+        {
+            try
+            {
+                return perciudad.Listar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public void Crear(Ciudad ciudad)
         {
             try

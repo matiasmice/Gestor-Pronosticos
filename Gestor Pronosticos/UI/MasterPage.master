@@ -26,7 +26,7 @@
 &nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" Font-Overline="False" Font-Underline="True" ForeColor="Blue" OnClick="Button1_Click" Text="Cerrar Sesión" />
                 &nbsp;&nbsp;&nbsp;&nbsp; </p>
             <div>
-                <asp:Menu ID="Menu1" runat="server" BackColor="#33CCCC" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Georgia" Font-Size="Large" Font-Strikeout="False" ForeColor="Black" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <asp:Menu ID="Menu1" runat="server" BackColor="#33CCCC" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Georgia" Font-Size="Large" Font-Strikeout="False" ForeColor="Black" Orientation="Horizontal" StaticSubMenuIndent="10px" OnMenuItemClick="Menu1_MenuItemClick">
                     <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
                     <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                     <DynamicMenuStyle BackColor="#E3EAEB" />
@@ -36,7 +36,7 @@
                         <asp:MenuItem Text="Edición de Usuario" Value="Usuarios" NavigateUrl="~/EditUsr.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Paises" Value="Paises" NavigateUrl="~/ABM Pais.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Ciudades" Value="Ciudades" NavigateUrl="~/ABM Ciudad.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Registrar Pronóstico" Value="Registrar Pronóstico"></asp:MenuItem>
+                        <asp:MenuItem Text="Registrar Pronóstico" Value="Registrar Pronóstico" NavigateUrl="~/ABM Pronostico.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Pronósticos por ciudad" Value="Pronósticos por ciudad" NavigateUrl="~/PronosticosPorCiudad.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Pronósticos por día" Value="Pronósticos por día" NavigateUrl="~/PronosticosPorDia.aspx"></asp:MenuItem>
                     </Items>

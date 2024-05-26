@@ -52,11 +52,7 @@ namespace Entidades
             }
         }
 
-        //Se crea una propiedad que devuelva el ToString para poder agregarla en la DropDounList
-        /*public string Dato
-        {
-            get { return ToString(); }
-        }*/
+        
         #endregion
 
 

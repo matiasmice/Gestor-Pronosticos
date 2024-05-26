@@ -32,7 +32,7 @@ namespace Persistencia
                 {
                    
                     Pais pais = perPais.Buscar(reader["CodPais"].ToString());
-                    ciudad = new Ciudad(reader["Nombre"].ToString(), reader["CodCiud"].ToString(), pais);
+                    ciudad = new Ciudad(reader["Nombre"].ToString(), reader["CodCiudad"].ToString(), pais);
                     ciudades.Add(ciudad);
 
                 }
@@ -40,7 +40,7 @@ namespace Persistencia
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Problemas con la base de datos:" + ex.Message);
+                throw ex;
             }
             finally
             {

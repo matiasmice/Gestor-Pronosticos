@@ -38,5 +38,17 @@ namespace Logica
                 throw ex;
             }
         }
+
+        public bool Agregar(Pronostico pronostico)
+        {
+            try
+            {
+                return perPronosticos.Agregar(pronostico);
+            } 
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

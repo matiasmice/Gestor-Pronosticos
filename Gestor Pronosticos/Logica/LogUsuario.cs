@@ -12,11 +12,11 @@ namespace Logica
     {
         private PerUsuario perusr = new PerUsuario();
 
-        public void Editar(Usuario usuario)
+        public bool Editar(Usuario usuario)
         {
             try
             {
-                perusr.Editar(usuario);
+                return perusr.Editar(usuario);
             }
             catch (Exception ex)
             {
@@ -24,11 +24,11 @@ namespace Logica
             }
         }
 
-        public void Eliminar(Usuario usr)
+        public bool Eliminar(Usuario usr)
         {
             try
             {
-                perusr.Eliminar(usr);
+                return perusr.Eliminar(usr);
             }
             catch (Exception ex)
             {
@@ -36,11 +36,11 @@ namespace Logica
             }
         }
 
-        public void Crear(Usuario usuario)
+        public bool Crear(Usuario usuario)
         {
             try
             {
-                perusr.Crear(usuario);
+               return perusr.Crear(usuario);
             }
             catch (Exception ex)
             {

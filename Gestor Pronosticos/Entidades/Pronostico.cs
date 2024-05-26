@@ -41,9 +41,9 @@ namespace Entidades
             set
             {
                 if (value < -100 || value > 60)
-                    throw new Exception("Ingrese un valor válido de temperatura mínima");
+                    throw new Exception("Ingrese un valor válido de temperatura mínima válido");
                 else
-                    _tempmin = Convert.ToInt32(value);
+                    _tempmin = value;
             }
         }
         public int TempMax //¿Habría que chequear que Tmax sea mayor a Tmin?
@@ -52,7 +52,7 @@ namespace Entidades
             set
             {
                 if (value < -100 || value > 60)
-                    throw new Exception("Ingrese un valor de temperatura máxima");
+                    throw new Exception("Ingrese un valor de temperatura máxima válido");
                 else
                     _tempmax = value;
             }
@@ -94,7 +94,7 @@ namespace Entidades
             }
         }
 
-        public DateTime Fecha //¿acá hay que validar formato de fecha o algo más?
+        public DateTime Fecha 
         {
             get { return _fecha; }
             set
@@ -105,9 +105,9 @@ namespace Entidades
 
 
         public int CodAuto
-        {
-            get { return _codauto; }
-            set { _codauto = value; }
+       {
+           get { return _codauto; }
+           set { _codauto = value; }
 
         }
 
@@ -137,8 +137,22 @@ namespace Entidades
 
         #region Constructores
 
-
-        public Pronostico(string tipodecielo, Usuario usuario, Ciudad ciudad, int tempmax, int tempmin, int problluvia, int probtormenta, int velviento, DateTime fecha, int codAuto)
+        //sin auto
+        public Pronostico(string tipodecielo, Usuario usuario, Ciudad ciudad, int tempmax, int tempmin, int problluvia, int probtormenta, int velviento, DateTime fecha) 
+        {
+            TipodeCielo = tipodecielo;
+            Usuario = usuario;
+            Ciudad = ciudad;
+            TempMax = tempmax;
+            TempMin = tempmin;
+            ProbLluvia = problluvia;
+            ProbTormenta = probtormenta;
+            VelViento = velviento;
+            Fecha = fecha;
+           
+        }
+        //completo
+        public Pronostico(string tipodecielo, Usuario usuario, Ciudad ciudad, int tempmax, int tempmin, int problluvia, int probtormenta, int velviento, DateTime fecha,int codAuto)
         {
             TipodeCielo = tipodecielo;
             Usuario = usuario;
@@ -151,7 +165,6 @@ namespace Entidades
             Fecha = fecha;
             CodAuto = codAuto;
         }
-
         #endregion
 
         #region "Metodos"

@@ -18,70 +18,63 @@ public partial class EditUsr : System.Web.UI.Page
     {
         try
         {
-
             string codpais = txtCodPais.Text;
-            Pais pais = logpais.Buscar(codpais);
-            btnBuscar.Enabled = false;
-
-            if (pais != null)
+            if (codpais != string.Empty)
             {
-                txtCodPais.Text = pais.CodPais;
-                txtNombre.Text = pais.Nombre;
+                Pais pais = logpais.Buscar(codpais);
+                btnBuscar.Enabled = false;
 
-                txtCodPais.Enabled = false;
-                txtNombre.Enabled = true;
-                btnEditar.Enabled = true;
-                btnEliminar.Enabled = true;
+                if (pais != null)
+                {
+                    txtCodPais.Text = pais.CodPais;
+                    txtNombre.Text = pais.Nombre;
 
+                    txtCodPais.Enabled = false;
+                    txtNombre.Enabled = true;
+                    btnEditar.Enabled = true;
+                    btnEliminar.Enabled = true;
+
+                }
+                else
+                {
+                    lblPais.ForeColor = System.Drawing.Color.Red;
+                    lblPais.Text = "No existe el país buscado";
+                    txtNombre.Enabled = true;
+                    btnCrear.Enabled = true;
+
+                }
             }
             else
             {
                 lblPais.ForeColor = System.Drawing.Color.Red;
-                lblPais.Text = "No existe el país buscado";
-                txtNombre.Enabled = true;
-                btnCrear.Enabled = true;
-
+                lblPais.Text = "Debe ingresar un código país.";
             }
-
         }
         catch (Exception ex)
         {
+            lblPais.ForeColor = System.Drawing.Color.Red;
             lblPais.Text = ex.Message;
         }
 
-    
+
     }
     protected void btnEditar_Click(object sender, EventArgs e)
     {
-     
+
         try
         {
             string nom = txtNombre.Text;
             string codPais = txtCodPais.Text;
-            Pais pais = new Pais(nom,codPais);
-            logpais.Editar(pais);
+            Pais pais = new Pais(nom, codPais);
+            if (logpais.Editar(pais))
+            {
+                lblPais.ForeColor = System.Drawing.Color.Green;
+                lblPais.Text = "País editado con éxito.";
+            }
         }
         catch (Exception ex)
         {
-            lblPais.Text = ex.Message;
-        }
-    }
-
-    protected void btnEliminar_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            
-            lblPais.Text = string.Empty;
-            txtNombre.Enabled = false;
-            string codpais = txtCodPais.Text;
-            Pais pais = logpais.Buscar(codpais);
-            logpais.Eliminar(pais);           
-
-        }
-        catch (Exception ex)
-        {
-            
+            lblPais.ForeColor = System.Drawing.Color.Red;
             lblPais.Text = ex.Message;
         }
         finally
@@ -89,7 +82,32 @@ public partial class EditUsr : System.Web.UI.Page
             LimpiarControles();
         }
     }
+    protected void btnEliminar_Click(object sender, EventArgs e)
+    {
+        try
+        {
 
+            lblPais.Text = string.Empty;
+            txtNombre.Enabled = false;
+            string codpais = txtCodPais.Text;
+            Pais pais = logpais.Buscar(codpais);
+            if (logpais.Eliminar(pais))
+            {
+                lblPais.ForeColor = System.Drawing.Color.Green;
+                lblPais.Text = "País eliminado con éxito.";
+            }
+
+        }
+        catch (Exception ex)
+        {
+            lblPais.ForeColor = System.Drawing.Color.Red;
+            lblPais.Text = ex.Message;
+        }
+        finally
+        {
+            LimpiarControles();
+        }
+    }
     protected void BtnCrear_Click(object sender, EventArgs e)
     {
         try
@@ -97,10 +115,15 @@ public partial class EditUsr : System.Web.UI.Page
             string nom = txtNombre.Text;
             string codPais = txtCodPais.Text;
             Pais pais = new Pais(nom, codPais);
-            logpais.Crear(pais);
+            if (logpais.Crear(pais))
+            {
+                lblPais.ForeColor = System.Drawing.Color.Green;
+                lblPais.Text = "País creado con éxito.";
+            }
         }
         catch (Exception ex)
         {
+            lblPais.ForeColor = System.Drawing.Color.Red;
             lblPais.Text = ex.Message;
         }
         finally
@@ -110,7 +133,7 @@ public partial class EditUsr : System.Web.UI.Page
     }
     private void LimpiarControles()
     {
-        
+
         txtCodPais.Text = string.Empty;
         txtNombre.Text = string.Empty;
         txtCodPais.Enabled = true;
@@ -118,5 +141,6 @@ public partial class EditUsr : System.Web.UI.Page
         btnCrear.Enabled = false;
         btnEditar.Enabled = false;
         btnEliminar.Enabled = false;
-    }    
+        btnBuscar.Enabled = true;
+    }
 }

@@ -104,12 +104,12 @@ namespace Persistencia
                     Usuario usuario = perUsuario.Buscar(reader["Usuario"].ToString());
                     Ciudad ciudad = perCiudad.Buscar(reader["CodCiudad"].ToString(), reader["CodPais"].ToString());
 
-                    pronostico = new Pronostico(reader["TipodeCielo"].ToString(), usuario, ciudad, 
+                    pronostico = new Pronostico(reader["TipodeCielo"].ToString(), usuario, ciudad,
                                                Convert.ToInt32(reader["TempMax"].ToString()),
-                                               Convert.ToInt32(reader["TempMin"].ToString()), 
-                                               Convert.ToInt32(reader["ProbLluvia"].ToString()), 
+                                               Convert.ToInt32(reader["TempMin"].ToString()),
+                                               Convert.ToInt32(reader["ProbLluvia"].ToString()),
                                                Convert.ToInt32(reader["ProbTormenta"].ToString()),
-                                               Convert.ToInt32(reader["VelViento"].ToString()), 
+                                               Convert.ToInt32(reader["VelViento"].ToString()),
                                                Convert.ToDateTime(reader["Fecha"].ToString()),
                                                Convert.ToInt32(reader["CodAuto"].ToString()));                                               
 
@@ -128,14 +128,14 @@ namespace Persistencia
             }
         }
 
-        public void Agregar(Pronostico pronostico) 
+        public bool Agregar(Pronostico pronostico) 
         {
             //Varible de conexión
             SqlConnection sqlConnection = new SqlConnection(Conexion.connectionString);
 
             try
             {
-                SqlCommand command = new SqlCommand("sp_AltaPronostico", sqlConnection);
+                SqlCommand command = new SqlCommand("sp_AgregarPronostico", sqlConnection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add(new SqlParameter("CodCiud", pronostico.Ciudad.CodCiudad));
                 command.Parameters.Add(new SqlParameter("Usr", pronostico.Usuario.User));
@@ -160,6 +160,9 @@ namespace Persistencia
                 command.ExecuteNonQuery();
 
                 //Clasifico el retorno 
+                if (Convert.ToInt32 (retorno.Value)==1)
+                        return true;
+
                 switch (Convert.ToInt32(retorno.Value))
                 {
                     case -1:
@@ -177,11 +180,11 @@ namespace Persistencia
                             throw new Exception("Debe completar todos los datos para ingresar el prónostico");
                             break;
                         }
-                    case 1:
+                    case -4:
                         {
-                            throw new Exception("Pronóstico creado con éxito");
-                            break;
+                            throw new Exception("La fecha del pronóstico no puede ser anterior a la de hoy.");
                         }
+                        
                     default:
                         {
                             throw new Exception("Error desconocido");

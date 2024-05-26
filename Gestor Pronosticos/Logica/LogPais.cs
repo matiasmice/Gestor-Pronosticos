@@ -23,11 +23,12 @@ namespace Logica
                 throw ex;
             }
         }
-        public void Editar(Pais pais)
+
+        public bool Editar(Pais pais)
         {
             try
             {
-                perpais.Editar(pais);
+                return perpais.Editar(pais);
             }
             catch (Exception ex)
             {
@@ -35,11 +36,11 @@ namespace Logica
             }
         }
 
-        public void Eliminar(Pais pais)
+        public bool Eliminar(Pais pais)
         {
             try
             {
-                perpais.Eliminar(pais);
+                return perpais.Eliminar(pais);
             }
             catch (Exception ex)
             {
@@ -47,11 +48,11 @@ namespace Logica
             }
         }
 
-        public void Crear(Pais pais)
+        public bool Crear(Pais pais)
         {
             try
             {
-                perpais.Agregar(pais);
+                return perpais.Agregar(pais);
             }
             catch (Exception ex)
             {
