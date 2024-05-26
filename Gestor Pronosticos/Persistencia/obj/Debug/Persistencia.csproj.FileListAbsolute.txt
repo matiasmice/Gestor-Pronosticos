@@ -24,3 +24,11 @@ C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronostico
 C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Persistencia\bin\Debug\Persistencia.pdb
 C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Persistencia\bin\Debug\Entidades.dll
 C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Persistencia\bin\Debug\Entidades.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\bin\Debug\Entidades.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\bin\Debug\Entidades.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\obj\Debug\Persistencia.csproj.AssemblyReference.cache
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Persistencia\obj\Debug\Persistencia.pdb

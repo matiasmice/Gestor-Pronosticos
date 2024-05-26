@@ -31,3 +31,14 @@ C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronostico
 C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Logica\bin\Debug\Entidades.pdb
 C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Logica\bin\Debug\Persistencia.pdb
 C:\Users\matia\Downloads\PF_Programación-Matias-Guzman-Marcos\Gestor Pronosticos\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\bin\Debug\Logica.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\bin\Debug\Logica.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\bin\Debug\Entidades.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\bin\Debug\Persistencia.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\bin\Debug\Entidades.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\bin\Debug\Persistencia.pdb
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\obj\Debug\Logica.dll
+C:\Users\matia\Downloads\Gestor Pronosticos\Gestor Pronosticos\Logica\obj\Debug\Logica.pdb
